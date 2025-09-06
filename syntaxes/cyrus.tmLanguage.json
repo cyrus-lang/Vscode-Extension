@@ -62,7 +62,11 @@
         },
         {
             "name": "entity.name.function.cyrus",
-            "match": "\\bfn\\s+[a-zA-Z_][a-zA-Z0-9_]*\\b"
+            "match": "\\b(func|fn)\\s+[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        },
+        {
+            "name": "support.function.call.cyrus",
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*(?=\\()"
         },
         {
             "name": "punctuation.definition.variable.cyrus",
@@ -93,6 +97,9 @@
             "match": "\\]"
         },
         {
+            "include": "#variables"
+        },
+        {
             "include": "#block_comment"
         }
     ],
@@ -101,7 +108,7 @@
             "patterns": [
                 {
                     "name": "variable.other.cyrus",
-                    "match": "#[a-zA-Z_][a-zA-Z0-9_]*"
+                    "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
                 }
             ]
         },
