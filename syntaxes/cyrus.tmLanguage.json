@@ -1,34 +1,82 @@
 {
   "scopeName": "source.cyrus",
   "name": "Cyrus",
-  "fileTypes": ["cyrus"],
+  "fileTypes": [
+    "cyrus"
+  ],
   "patterns": [
-    { "include": "#comments" },
-    { "include": "#strings" },
-    { "include": "#suffixed-numbers" },
-    { "include": "#decimal-numbers" },
-    { "include": "#keywords" },
-    { "include": "#types" },
-    { "include": "#type-annotations" },
-    { "include": "#namespaces" },
-    { "include": "#enum-members" },
-    { "include": "#properties" },
-    { "include": "#functions" },
-    { "include": "#variables" },
-    { "include": "#parameters" },
-    { "include": "#operators" }
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#suffixed-numbers"
+    },
+    {
+      "include": "#decimal-numbers"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#type-annotations"
+    },
+    {
+      "include": "#namespaces"
+    },
+    {
+      "include": "#enum-members"
+    },
+    {
+      "include": "#properties"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#labels"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#parameters"
+    },
+    {
+      "include": "#operators"
+    }
   ],
   "repository": {
     "comments": {
       "patterns": [
-        { "match": "//.*$", "name": "comment.line.double-slash.cyrus" },
-        { "begin": "/\\*", "end": "\\*/", "name": "comment.block.cyrus" }
+        {
+          "match": "//.*$",
+          "name": "comment.line.double-slash.cyrus"
+        },
+        {
+          "begin": "/\\*",
+          "end": "\\*/",
+          "name": "comment.block.cyrus"
+        }
       ]
     },
     "strings": {
       "patterns": [
-        { "begin": "\"", "end": "\"", "name": "string.quoted.double.cyrus" },
-        { "begin": "'", "end": "'", "name": "string.quoted.single.cyrus" }
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.cyrus"
+        },
+        {
+          "begin": "'",
+          "end": "'",
+          "name": "string.quoted.single.cyrus"
+        }
       ]
     },
     "suffixed-numbers": {
@@ -50,7 +98,7 @@
     "keywords": {
       "patterns": [
         {
-          "match": "\\b(if|else|for|while|switch|case|break|continue|return|pub|defer|fn|import|as|var|const|type|struct|enum|interface|macro|weak|linkonce|callconv|naked|noreturn|hot|cold|dllimport|dllexport|optsize|optnone|no_sanitize|nounwind|section)\\b",
+          "match": "\\b(if|else|goto|for|while|switch|case|break|continue|return|pub|defer|fn|import|as|var|const|type|struct|enum|interface|macro|weak|linkonce|callconv|naked|noreturn|hot|cold|dllimport|dllexport|optsize|optnone|no_sanitize|nounwind|section)\\b",
           "name": "keyword.control.cyrus"
         },
         {
@@ -67,7 +115,11 @@
         },
         {
           "match": "\\b(type|struct|enum|interface|class)\\s+([A-Za-z_][A-Za-z0-9_]*)",
-          "captures": { "2": { "name": "entity.name.type.cyrus" } }
+          "captures": {
+            "2": {
+              "name": "entity.name.type.cyrus"
+            }
+          }
         }
       ]
     },
@@ -76,7 +128,9 @@
         {
           "match": ":(\\s*)(int8|int16|int32|int64|int128|uint8|uint16|uint32|uint64|uint128|float16|float32|float64|float128|bool|char|string|void|any)",
           "captures": {
-            "2": { "name": "storage.type.builtin.cyrus" }
+            "2": {
+              "name": "storage.type.builtin.cyrus"
+            }
           }
         }
       ]
@@ -86,15 +140,23 @@
         {
           "match": "\\b([A-Za-z_][A-Za-z0-9_]*)::",
           "captures": {
-            "1": { "name": "support.namespace.cyrus" },
-            "0": { "name": "punctuation.separator.namespace.cyrus" }
+            "1": {
+              "name": "support.namespace.cyrus"
+            },
+            "0": {
+              "name": "punctuation.separator.namespace.cyrus"
+            }
           }
         },
         {
           "match": "::([A-Za-z_][A-Za-z0-9_]*)",
           "captures": {
-            "1": { "name": "support.namespace.cyrus" },
-            "0": { "name": "punctuation.separator.namespace.cyrus" }
+            "1": {
+              "name": "support.namespace.cyrus"
+            },
+            "0": {
+              "name": "punctuation.separator.namespace.cyrus"
+            }
           }
         }
       ]
@@ -104,8 +166,12 @@
         {
           "match": "\\b([A-Za-z_][A-Za-z0-9_]*)::([A-Za-z_][A-Za-z0-9_]*)\\b",
           "captures": {
-            "1": { "name": "support.namespace.cyrus" },
-            "2": { "name": "constant.other.enum-member.cyrus" }
+            "1": {
+              "name": "support.namespace.cyrus"
+            },
+            "2": {
+              "name": "constant.other.enum-member.cyrus"
+            }
           }
         }
       ]
@@ -114,7 +180,11 @@
       "patterns": [
         {
           "match": "\\.([A-Za-z_][A-Za-z0-9_]*)",
-          "captures": { "1": { "name": "variable.other.property.cyrus" } }
+          "captures": {
+            "1": {
+              "name": "variable.other.property.cyrus"
+            }
+          }
         }
       ]
     },
@@ -122,17 +192,39 @@
       "patterns": [
         {
           "match": "\\bfn\\s+([A-Za-z_][A-Za-z0-9_]*)",
-          "captures": { "1": { "name": "entity.name.function.cyrus" } }
+          "captures": {
+            "1": {
+              "name": "entity.name.function.cyrus"
+            }
+          }
         },
         {
           "match": "\\bmacro\\s+([A-Za-z_][A-Za-z0-9_]*)",
           "captures": {
-            "1": { "name": "entity.name.function.preprocessor.cyrus" }
+            "1": {
+              "name": "entity.name.function.preprocessor.cyrus"
+            }
           }
         },
         {
           "match": "\\b(?!(if|else|for|while|return|switch|case|break|continue|fn|var|const|macro|type|class|enum|interface)\\b)([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()",
-          "captures": { "2": { "name": "entity.name.function.member.cyrus" } }
+          "captures": {
+            "2": {
+              "name": "entity.name.function.member.cyrus"
+            }
+          }
+        }
+      ]
+    },
+    "labels": {
+      "patterns": [
+        {
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*:",
+          "captures": {
+            "1": {
+              "name": "entity.name.label.cyrus"
+            }
+          }
         }
       ]
     },
@@ -140,15 +232,27 @@
       "patterns": [
         {
           "match": "\\bvar\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
-          "captures": { "1": { "name": "variable.other.readwrite.cyrus" } }
+          "captures": {
+            "1": {
+              "name": "variable.other.readwrite.cyrus"
+            }
+          }
         },
         {
           "match": "\\bconst\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
-          "captures": { "1": { "name": "variable.other.constant.cyrus" } }
+          "captures": {
+            "1": {
+              "name": "variable.other.constant.cyrus"
+            }
+          }
         },
         {
           "match": "\\b(?!(if|else|for|while|switch|case|return|fn|var|const|macro|import|from|as|type|struct|enum|interface|class|new|delete|throw|try|catch|finally)\\b)([A-Za-z_][A-Za-z0-9_]*)(?!\\s*::)(?!\\s*\\()\\b",
-          "captures": { "2": { "name": "variable.other.readwrite.cyrus" } }
+          "captures": {
+            "2": {
+              "name": "variable.other.readwrite.cyrus"
+            }
+          }
         }
       ]
     },
@@ -156,20 +260,40 @@
       "patterns": [
         {
           "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*:",
-          "captures": { "1": { "name": "variable.parameter.cyrus" } }
+          "captures": {
+            "1": {
+              "name": "variable.parameter.cyrus"
+            }
+          }
         },
         {
           "match": ":\\s*(int|int32|float64|char\\*|bool|string|void|any)",
-          "captures": { "1": { "name": "storage.type.builtin.cyrus" } }
+          "captures": {
+            "1": {
+              "name": "storage.type.builtin.cyrus"
+            }
+          }
         }
       ]
     },
     "operators": {
       "patterns": [
-        { "match": "=", "name": "keyword.operator.assignment.cyrus" },
-        { "match": ":", "name": "keyword.operator.colon.cyrus" },
-        { "match": "&", "name": "keyword.operator.bitwise.and.cyrus" },
-        { "match": "\\*", "name": "keyword.operator.pointer.cyrus" }
+        {
+          "match": "=",
+          "name": "keyword.operator.assignment.cyrus"
+        },
+        {
+          "match": ":",
+          "name": "keyword.operator.colon.cyrus"
+        },
+        {
+          "match": "&",
+          "name": "keyword.operator.bitwise.and.cyrus"
+        },
+        {
+          "match": "\\*",
+          "name": "keyword.operator.pointer.cyrus"
+        }
       ]
     }
   }
