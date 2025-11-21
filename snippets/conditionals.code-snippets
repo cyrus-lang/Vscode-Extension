@@ -11,12 +11,43 @@
   },
   "If-Else If-Else Statement": {
     "prefix": "ifelseif",
-    "body": ["if (${1:cond1}) {", "    ${2}", "} else if (${3:cond2}) {", "    ${4}", "} else {", "    ${0}", "}"],
+    "body": [
+      "if (${1:cond1}) {",
+      "    ${2}",
+      "} else if (${3:cond2}) {",
+      "    ${4}",
+      "} else {",
+      "    ${0}",
+      "}"
+    ],
     "description": "If-else if-else chain"
   },
   "Switch Statement": {
     "prefix": "switch",
-    "body": ["switch (${1:var}) {", "    case ${2:value1}:", "        ${3}", "        break;", "    case ${4:value2}:", "        ${5}", "        break;", "    default:", "        ${0}", "        break;", "}"],
-    "description": "Switch statement with fallthrough"
+    "body": [
+      "switch (${1:expr}) {",
+      "    case ${2:value} => {",
+      "        ${3:// case body}",
+      "    }",
+      "    default => {",
+      "        ${0:// default case}",
+      "    }",
+      "}"
+    ],
+    "description": "Switch statement with arrow syntax and ranges"
+  },
+  "Switch On Enum": {
+    "prefix": "switchenum",
+    "body": [
+      "switch (${1:expr}) {",
+      "    case .${2:Variant} => {",
+      "        ${4:// case body}",
+      "    }",
+      "    default => {",
+      "        ${0:// default case}",
+      "    }",
+      "}"
+    ],
+    "description": "Switch statement matching on enum variants"
   }
 }

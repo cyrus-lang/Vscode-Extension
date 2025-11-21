@@ -1,12 +1,27 @@
 {
   "Rename Module": {
-    "prefix": "importmodrename",
-    "body": ["import ${1:module_name} as ${2:new_name};"],
+    "prefix": "import",
+    "body": ["import ${1:module_name};"],
     "description": "Rename an entire module on import"
   },
   "Import Multiple Symbols": {
     "prefix": "importmulti",
     "body": ["import ${1:module_name}{${2:symbol1}, ${3:symbol2}};"],
     "description": "Import multiple symbols from a module"
+  },
+  "Import and Rename Symbol": {
+    "prefix": "importrename",
+    "body": ["import ${1:module_name}{${2:symbol} as ${3:new_name}};"],
+    "description": "Import a symbol and rename it"
+  },
+  "Grouped Imports": {
+    "prefix": "importgroup",
+    "body": [
+      "import (",
+      "    ${1:module1},",
+      "    ${2:module2}{${3:symbol}}",
+      ");"
+    ],
+    "description": "Import multiple modules or symbols at once"
   }
 }

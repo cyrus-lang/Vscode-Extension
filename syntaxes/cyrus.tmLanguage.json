@@ -250,70 +250,82 @@
     "variables": {
       "patterns": [
         {
-          "match": "\\bvar\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
+          "match": "\\bvar\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*(:\\s*[A-Za-z_][A-Za-z0-9_]*)?(\\s*=\\s*[^;]+)?",
           "captures": {
             "1": {
               "name": "variable.other.readwrite.cyrus"
+            },
+            "2": {
+              "name": "storage.type.cyrus"
+            },
+            "3": {
+              "name": "meta.initialization.cyrus"
             }
           }
         },
         {
-          "match": "\\bconst\\s+([A-Za-z_][A-Za-z0-9_]*)\\b",
+          "match": "\\bconst\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*(:\\s*[A-Za-z_][A-Za-z0-9_]*)?(\\s*=\\s*[^;]+)?",
           "captures": {
             "1": {
               "name": "variable.other.constant.cyrus"
+            },
+            "2": {
+              "name": "storage.type.cyrus"
+            },
+            "3": {
+              "name": "meta.initialization.cyrus"
             }
           }
         },
         {
-          "match": "\\b(?!(if|else|for|while|switch|case|return|fn|var|const|macro|import|from|as|type|struct|enum|interface|class|new|delete|throw|try|catch|finally)\\b)([A-Za-z_][A-Za-z0-9_]*)(?!\\s*::)(?!\\s*\\()\\b",
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b",
           "captures": {
-            "2": {
+            "1": {
               "name": "variable.other.readwrite.cyrus"
             }
           }
         }
-      ]
-    },
-    "parameters": {
-      "patterns": [
-        {
-          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*:",
-          "captures": {
-            "1": {
-              "name": "variable.parameter.cyrus"
+      ],
+      "parameters": {
+        "patterns": [
+          {
+            "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*:",
+            "captures": {
+              "1": {
+                "name": "variable.parameter.cyrus"
+              }
+            }
+          },
+          {
+            "match": ":\\s*(int|int32|float64|char\\*|bool|string|void|any)",
+            "captures": {
+              "1": {
+                "name": "storage.type.builtin.cyrus"
+              }
             }
           }
-        },
-        {
-          "match": ":\\s*(int|int32|float64|char\\*|bool|string|void|any)",
-          "captures": {
-            "1": {
-              "name": "storage.type.builtin.cyrus"
-            }
+        ]
+      },
+      "operators": {
+        "patterns": [
+          {
+            "match": "=",
+            "name": "keyword.operator.assignment.cyrus"
+          },
+          {
+            "match": ":",
+            "name": "keyword.operator.colon.cyrus"
+          },
+          {
+            "match": "&",
+            "name": "keyword.operator.bitwise.and.cyrus"
+          },
+          {
+            "match": "\\*",
+            "name": "keyword.operator.pointer.cyrus"
           }
-        }
-      ]
-    },
-    "operators": {
-      "patterns": [
-        {
-          "match": "=",
-          "name": "keyword.operator.assignment.cyrus"
-        },
-        {
-          "match": ":",
-          "name": "keyword.operator.colon.cyrus"
-        },
-        {
-          "match": "&",
-          "name": "keyword.operator.bitwise.and.cyrus"
-        },
-        {
-          "match": "\\*",
-          "name": "keyword.operator.pointer.cyrus"
-        }
-      ]
+        ]
+      }
     }
   }
 }

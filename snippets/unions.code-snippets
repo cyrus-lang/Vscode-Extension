@@ -1,17 +1,19 @@
 {
   "Union Definition": {
     "prefix": "union",
-    "body": ["union ${1:Name} {", "    ${2:field1}: ${3:Type1};", "    ${4:field2}: ${5:Type2};", "    ${0}", "}"],
+    "body": [
+      "union ${1:name} {",
+      "    ${2:field1}: ${3:Type1};",
+      "    ${0}",
+      "}"
+    ],
     "description": "Define a union type"
   },
   "Union Initialization": {
     "prefix": "unioninit",
-    "body": ["var ${1:instance}: ${2:Name} = ${2:Name} { ${3:field} = ${4:value} };"],
+    "body": [
+      "var ${1:instance}: ${2:name} = ${2:name} { ${3:field} = ${4:value} };"
+    ],
     "description": "Initialize a union with a single field"
-  },
-  "Union Field Assignment": {
-    "prefix": "unionassign",
-    "body": ["${1:instance}.${2:field} = ${3:value};"],
-    "description": "Assign a value to a union field"
   }
 }

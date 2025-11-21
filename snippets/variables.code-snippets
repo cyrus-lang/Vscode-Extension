@@ -1,67 +1,47 @@
 {
   "Global Mutable Variable": {
     "prefix": "gvar",
-    "body": ["pub var ${1:NAME}: ${2:Type} = ${3:Value};"],
+    "body": ["pub var ${1:name}: ${2:type} = ${3:value};"],
     "description": "Declare a public mutable global variable"
   },
-
   "Global Immutable Variable": {
     "prefix": "gconst",
-    "body": ["pub const ${1:NAME}: ${2:Type} = ${3:Value};"],
+    "body": ["pub const ${1:name}: ${2:type} = ${3:value};"],
     "description": "Declare a public immutable global variable"
   },
-
   "Private Mutable Global Variable": {
     "prefix": "var",
-    "body": ["var ${1:NAME}: ${2:Type} = ${3:Value};"],
+    "body": ["var ${1:name}: ${2:type} = ${3:value};"],
     "description": "Private mutable global variable"
   },
-
   "Private Immutable Global Variable": {
     "prefix": "const",
-    "body": ["const ${1:NAME}: ${2:Type} = ${3:Value};"],
+    "body": ["const ${1:name}: ${2:type} = ${3:value};"],
     "description": "Private immutable global variable"
   },
-
   "External Global Variable": {
     "prefix": "extern",
-    "body": ["extern ${1:NAME}: ${2:Type};"],
+    "body": ["extern ${1:name}: ${2:type};"],
     "description": "Declare a private external global"
   },
-
   "Public External Global Variable": {
     "prefix": "pubextern",
-    "body": ["pub extern ${1:NAME}: ${2:Type};"],
+    "body": ["pub extern ${1:name}: ${2:type};"],
     "description": "Declare a public external global"
   },
-
   "Local Mutable Variable": {
     "prefix": "lvar",
-    "body": ["var ${1:NAME}: ${2:Type} = ${3:Value};"],
+    "body": ["var ${1:name}: ${2:type} = ${3:value};"],
     "description": "Local mutable variable"
   },
-
   "Local Immutable Variable": {
     "prefix": "lconst",
-    "body": ["const ${1:NAME}: ${2:Type} = ${3:Value};"],
+    "body": ["const ${1:name}: ${2:type} = ${3:value};"],
     "description": "Local immutable variable"
   },
-
   "Zero-Initialized Variable": {
     "prefix": "zero",
-    "body": ["var ${1:NAME}: ${2:Type};"],
+    "body": ["var ${1:name}: ${2:type};"],
     "description": "Zero-initialized variable"
-  },
-
-  "Tuple Destructuring": {
-    "prefix": "tuple",
-    "body": ["var (${1:x}, ${2:y}) = (${3:val1}, ${4:val2});"],
-    "description": "Tuple destructuring"
-  },
-
-  "Const Tuple Destructuring": {
-    "prefix": "ctuple",
-    "body": ["const (${1:x}, ${2:y}) = (${3:val1}, ${4:val2});"],
-    "description": "Const tuple destructuring"
   }
 }

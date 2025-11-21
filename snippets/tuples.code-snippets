@@ -6,8 +6,8 @@
   },
   "Tuple Access": {
     "prefix": "tupleaccess",
-    "body": ["${1:tuple}.${2:0}", "${1:tuple}.${3:1}"],
-    "description": "Access tuple elements by index"
+    "body": ["${1:tuple}.${2:idx}"],
+    "description": "Access a tuple element by index"
   },
   "Tuple Destructuring": {
     "prefix": "tupledestruct",

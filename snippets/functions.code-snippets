@@ -2,66 +2,15 @@
   "Function Declaration": {
     "prefix": "fn",
     "body": [
-      "fn ${1:functionName}(${2:params}) -> ${3:ReturnType} {",
+      "fn ${1:func_name}(${2:params}) ${3:return_type} {",
       "    ${5}",
       "}"
     ],
     "description": "Declare a function with return type and description"
   },
-
   "Void Function": {
     "prefix": "fnv",
-    "body": ["fn ${1:functionName}(${2:params}) {", "    ${3}", "}"],
+    "body": ["fn ${1:func_name}(${2:params}) {", "    ${3}", "}"],
     "description": "Declare a void function (no return value)"
-  },
-
-  "Inline Function": {
-    "prefix": "fni",
-    "body": [
-      "inline fn ${1:functionName}(${2:params}) -> ${3:ReturnType} => ${4:expression}"
-    ],
-    "description": "Single-expression inline function"
-  },
-
-  "Recursive Function": {
-    "prefix": "fnr",
-    "body": [
-      "fn ${1:factorial}(n: ${2:Int}) -> ${2:Int} {",
-      "    if n <= 1 {",
-      "        return 1",
-      "    }",
-      "    return n * ${1:factorial}(n - 1)",
-      "}"
-    ],
-    "description": "Recursive function example (factorial)"
-  },
-
-  "Anonymous Function": {
-    "prefix": "lambda",
-    "body": ["let ${1:fnVar} = (${2:params}) => ${3:expression}"],
-    "description": "Anonymous function (lambda expression)"
-  },
-
-  "Async Function": {
-    "prefix": "fnasync",
-    "body": [
-      "async fn ${1:functionName}(${2:params}) -> ${3:ReturnType} {",
-      "    ${4}",
-      "}"
-    ],
-    "description": "Asynchronous function with async/await"
-  },
-  "Cyrus Init with Hello": {
-    "prefix": "init",
-    "body": [
-      "import std::io;",
-      "",
-      "fn main() {",
-      "    var msg: char* = \"Hello, Cyrus!\";",
-      "    printfn(msg);",
-      "    ${0}",
-      "}"
-    ],
-    "description": "Initialize a basic Cyrus program printing Hello, Cyrus!"
   }
 }

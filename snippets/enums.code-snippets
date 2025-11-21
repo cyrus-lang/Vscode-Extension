@@ -1,17 +1,14 @@
 {
   "Enum Definition": {
     "prefix": "enum",
-    "body": ["enum ${1:Name} {", "    ${2:Variant1},", "    ${3:Variant2} = ${4:Value},", "    ${0}", "}"],
+    "body": [
+      "enum ${1:name} {",
+      "    ${2:Plain},",
+      "    ${3:Valued} = ${4:value},",
+      "    ${5:Fielded}(${6:type}),",
+      "    ${0}",
+      "}"
+    ],
     "description": "Define an enum type"
-  },
-  "Enum Usage": {
-    "prefix": "enumval",
-    "body": ["var ${1:var} = ${2:Name}.${3:Variant};"],
-    "description": "Assign an enum variant"
-  },
-  "Switch Enum": {
-    "prefix": "switchenum",
-    "body": ["switch (${1:var}) {", "    case .${2:Variant1}:", "        ${3}", "        break;", "    case .${4:Variant2}(a, b):", "        ${5}", "        break;", "    default:", "        ${0}", "        break;", "}"],
-    "description": "Switch statement for enums"
   }
 }

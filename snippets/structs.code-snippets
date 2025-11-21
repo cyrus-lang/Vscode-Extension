@@ -1,27 +1,22 @@
 {
   "Struct Definition": {
     "prefix": "struct",
-    "body": ["struct ${1:Name} {", "    ${2:field}: ${3:Type};", "    ${0}", "}"],
+    "body": [
+      "struct ${1:name} {",
+      "    ${2:field}: ${3:type};",
+      "    ${0}",
+      "}"
+    ],
     "description": "Define a new struct type"
   },
   "Struct Initialization": {
     "prefix": "structinit",
-    "body": ["var ${1:instance} = ${2:Name} {", "    ${3:field} = ${4:value},", "    ${0}", "};"],
+    "body": [
+      "var ${1:instance} = ${2:name} {",
+      "    ${3:field} = ${4:value},",
+      "    ${0}",
+      "};"
+    ],
     "description": "Initialize a struct instance"
-  },
-  "Struct Method": {
-    "prefix": "method",
-    "body": ["pub fn ${1:method}(&self, ${2:params}) ${3:ReturnType} {", "    ${0}", "}"],
-    "description": "Define an instance method"
-  },
-  "Static Method": {
-    "prefix": "staticmethod",
-    "body": ["pub fn ${1:method}(${2:params}) ${3:ReturnType} {", "    ${0}", "}"],
-    "description": "Define a static method"
-  },
-  "Fat Pointer Access": {
-    "prefix": "ptraccess",
-    "body": ["var ${1:ptr} = &${2:instance};", "${1:ptr}->${3:field};"],
-    "description": "Access struct fields via pointer"
   }
 }

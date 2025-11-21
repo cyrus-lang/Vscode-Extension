@@ -1,27 +1,31 @@
 {
   "Classic For Loop": {
     "prefix": "forc",
-    "body": ["for (var ${1:i} = ${2:0}; ${1:i} < ${3:10}; ${1:i}++) {", "    ${0}", "}"],
+    "body": [
+      "for (var ${1:i} = ${2:0}; ${1:i} < ${3:10}; ${1:i}++) {",
+      "    ${0}",
+      "}"
+    ],
     "description": "Counter for loop"
   },
   "Manual Increment Loop": {
     "prefix": "formanual",
-    "body": ["for (var ${1:i} = ${2:0}; ${1:i} < ${3:10};) {", "    ${0}", "    ${1:i}++;", "}"],
+    "body": [
+      "for (var ${1:i} = ${2:0}; ${1:i} < ${3:10};) {",
+      "    ${0}",
+      "    ${1:i}++;",
+      "}"
+    ],
     "description": "For loop with manual increment"
   },
   "For Infinite Loop": {
-    "prefix": "forinf",
+    "prefix": "loop",
     "body": ["for {", "    ${0}", "}"],
     "description": "Infinite loop"
   },
   "While Loop": {
     "prefix": "while",
-    "body": ["while (${1:condition}) {", "    ${0}", "}"],
+    "body": ["while (${1:cond}) {", "    ${0}", "}"],
     "description": "While loop"
-  },
-  "While True Loop": {
-    "prefix": "whiletrue",
-    "body": ["while (true) {", "    ${0}", "}"],
-    "description": "Infinite while loop"
   }
 }
