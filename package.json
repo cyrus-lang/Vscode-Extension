@@ -2,7 +2,7 @@
   "name": "cyrus-language",
   "displayName": "Cyrus Programming Language",
   "description": "The Cyrus Programming Language",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "engines": {
     "vscode": "^1.96.0"
   },

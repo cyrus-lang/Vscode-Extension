@@ -101,7 +101,7 @@
     "keywords": {
       "patterns": [
         {
-          "match": "\\b(if|else|goto|for|while|switch|case|default||break|continue|return|pub|defer|fn|import|as|var|const|type|struct|enum|interface|macro|weak|linkonce|callconv|naked|noreturn|hot|cold|dllimport|dllexport|optsize|optnone|no_sanitize|nounwind|section)\\b",
+          "match": "\\b(if|else|goto|for|while|switch|case|default|break|continue|return|pub|defer|fn|import|as|var|const|type|struct|enum|interface|macro|weak|linkonce|callconv|naked|noreturn|hot|cold|dllimport|dllexport|optsize|optnone|no_sanitize|nounwind|section)\\b",
           "name": "keyword.control.cyrus"
         },
         {
@@ -194,36 +194,16 @@
     "switch": {
       "patterns": [
         {
-          "match": "\\bswitch\\s*\\(([^)]*)\\)",
-          "captures": {
-            "1": {
-              "name": "entity.name.switch.cyrus"
-            }
-          }
+          "match": "\\bswitch\\b",
+          "name": "keyword.control.switch.cyrus"
         },
         {
-          "match": "\\bcase\\s+([^=]+)=>",
-          "captures": {
-            "1": {
-              "name": "entity.name.case.cyrus"
-            }
-          }
+          "match": "\\bcase\\b",
+          "name": "keyword.control.case.cyrus"
         },
         {
-          "match": "\\bcase\\s+(\\.[A-Za-z_][A-Za-z0-9_]*(?:\\([^)]*\\))?)\\s*=>",
-          "captures": {
-            "1": {
-              "name": "entity.name.enum.variant.cyrus"
-            }
-          }
-        },
-        {
-          "match": "\\bdefault\\s*=>",
-          "captures": {
-            "0": {
-              "name": "keyword.control.default.cyrus"
-            }
-          }
+          "match": "\\bdefault\\b",
+          "name": "keyword.control.default.cyrus"
         }
       ]
     },
