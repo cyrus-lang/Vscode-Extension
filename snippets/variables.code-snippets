@@ -43,5 +43,15 @@
     "prefix": "zero",
     "body": ["var ${1:name}: ${2:type};"],
     "description": "Zero-initialized variable"
+  },
+  "Dereference Reference": {
+    "prefix": "deref",
+    "body": ["(*${1:ref}).${2:field}"],
+    "description": "Access a field through a pointer/reference"
+  },
+  "Arrow Access": {
+    "prefix": "arrow",
+    "body": ["${1:ref}->${2:field}"],
+    "description": "Access a field using arrow syntax"
   }
 }
