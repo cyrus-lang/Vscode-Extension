@@ -101,7 +101,7 @@
     "keywords": {
       "patterns": [
         {
-          "match": "\\b(if|else|goto|for|while|switch|case|default|break|continue|return|pub|defer|fn|import|as|var|const|type|struct|enum|interface|macro|weak|linkonce|callconv|naked|noreturn|hot|cold|dllimport|dllexport|optsize|optnone|no_sanitize|nounwind|section)\\b",
+          "match": "\\b(if|else|goto|for|while|switch|case|default|break|continue|return|pub|defer|fn|import|as|var|const|type|struct|enum|union|interface|macro|weak|linkonce|callconv|naked|noreturn|hot|cold|dllimport|dllexport|optsize|optnone|no_sanitize|nounwind|section)\\b",
           "name": "keyword.control.cyrus"
         },
         {
@@ -115,14 +115,6 @@
         {
           "match": "\\b(int|int8|int16|int32|int64|int128|uint|uint8|uint16|uint32|uint64|uint128|intptr|uintptr|size_t|float16|float32|float64|float128|bool|char|void|any)\\b",
           "name": "storage.type.builtin.cyrus"
-        },
-        {
-          "match": "\\b(type|struct|enum|interface|class)\\s+([A-Za-z_][A-Za-z0-9_]*)",
-          "captures": {
-            "2": {
-              "name": "entity.name.type.cyrus"
-            }
-          }
         }
       ]
     },
@@ -226,7 +218,7 @@
           }
         },
         {
-          "match": "\\b(?!(if|else|for|while|return|switch|case|break|continue|fn|var|const|macro|type|class|enum|interface)\\b)([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()",
+          "match": "\\b(?!(if|else|for|while|return|switch|case|break|continue|fn|var|const|macro|type|union|enum|interface)\\b)([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()",
           "captures": {
             "2": {
               "name": "entity.name.function.member.cyrus"
