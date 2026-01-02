@@ -12,5 +12,14 @@
     "prefix": "fnv",
     "body": ["fn ${1:func_name}(${2:params}) {", "    ${3}", "}"],
     "description": "Declare a void function (no return value)"
+  },
+  "Main Function": {
+    "prefix": "fm",
+    "body": [
+      "pub fn main() {",
+      "    $0",
+      "}"
+    ],
+    "description": "Create a public main function"
   }
 }
