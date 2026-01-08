@@ -113,7 +113,7 @@
     "types": {
       "patterns": [
         {
-          "match": "\\b(int|int8|int16|int32|int64|int128|uint|uint8|uint16|uint32|uint64|uint128|intptr|uintptr|size_t|float16|float32|float64|float128|bool|char|void|any)\\b",
+          "match": "\\b(int|int8|int16|int32|int64|int128|uint|uint8|uint16|uint32|uint64|uint128|intptr|uintptr|isize|usize|float16|float32|float64|float128|bool|char|void|any)\\b",
           "name": "storage.type.builtin.cyrus"
         }
       ]
