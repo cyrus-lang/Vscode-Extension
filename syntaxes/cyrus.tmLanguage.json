@@ -101,7 +101,7 @@
     "keywords": {
       "patterns": [
         {
-          "match": "\\b(if|else|goto|for|while|switch|case|default|break|continue|return|pub|defer|fn|import|as|var|const|type|struct|enum|union|interface|macro|weak|linkonce|callconv|naked|noreturn|hot|cold|dllimport|dllexport|optsize|optnone|no_sanitize|nounwind|section|extern|inline)\\b",
+          "match": "\\b(if|else|goto|for|foreach|while|switch|case|default|break|continue|return|pub|defer|fn|import|as|var|const|type|dynamic|struct|enum|union|interface|macro|weak|linkonce|callconv|naked|noreturn|hot|cold|dllimport|dllexport|optsize|optnone|no_sanitize|nounwind|section|extern|inline)\\b",
           "name": "keyword.control.cyrus"
         },
         {
