@@ -73,12 +73,24 @@
         {
           "begin": "\"",
           "end": "\"",
-          "name": "string.quoted.double.cyrus"
+          "name": "string.quoted.double.cyrus",
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escape.cyrus"
+            }
+          ]
         },
         {
           "begin": "'",
           "end": "'",
-          "name": "string.quoted.single.cyrus"
+          "name": "string.quoted.single.cyrus",
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escape.cyrus"
+            }
+          ]
         }
       ]
     },
