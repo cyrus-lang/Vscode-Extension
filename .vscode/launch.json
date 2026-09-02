@@ -12,6 +12,24 @@
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}"
 			]
+		},
+		{
+			"name": "Debug Cyrus Project",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${workspaceFolder}/target/debug/${workspaceFolderBasename}",
+			"args": [],
+			"cwd": "${workspaceFolder}",
+			"preLaunchTask": "Cyrus: Build Project (Project.toml)"
+		},
+		{
+			"name": "Debug Current Cyrus File",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${fileDirname}/${fileBasenameNoExtension}",
+			"args": [],
+			"cwd": "${workspaceFolder}",
+			"preLaunchTask": "Cyrus: Build Current File"
 		}
 	]
 }

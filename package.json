@@ -20,7 +20,27 @@
   "categories": [
     "Programming Languages"
   ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage:cyrus",
+    "onStartupFinished"
+  ],
   "contributes": {
+    "breakpoints": [
+      {
+        "language": "cyrus"
+      }
+    ],
+    "taskDefinitions": [
+      {
+        "type": "cyrus",
+        "properties": {
+          "task": {
+            "type": "string"
+          }
+        }
+      }
+    ],
     "snippets": [
       {
         "language": "cyrus",
@@ -96,6 +116,39 @@
         "language": "cyrus",
         "scopeName": "source.cyrus",
         "path": "./syntaxes/cyrus.tmLanguage.json"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "lldb",
+        "label": "Cyrus LLDB Debugger",
+        "languages": [
+          "cyrus"
+        ],
+        "initialConfigurations": [
+          {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Cyrus Binary",
+            "program": "${workspaceFolder}/main",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+          }
+        ],
+        "configurationSnippets": [
+          {
+            "label": "Cyrus: LLDB Launch",
+            "description": "Debug Cyrus binary using LLDB",
+            "body": {
+              "type": "lldb",
+              "request": "launch",
+              "name": "${1:Debug Cyrus Program}",
+              "program": "${workspaceFolder}/${2:main}",
+              "args": [],
+              "cwd": "${workspaceFolder}"
+            }
+          }
+        ]
       }
     ],
     "themes": [

@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Cyrus: Build Project (Project.toml)",
+            "command": "cyrus",
+            "args": [
+                "build",
+                "--profile=debug",
+                "--sanitize=address",
+                "-g",
+                "--optimize=o0"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "Cyrus: Build Current File",
+            "command": "cyrus",
+            "args": [
+                "build",
+                "--profile=debug",
+                "--sanitize=address",
+                "-g",
+                "--optimize=o0",
+                "${file}",
+                "-o=${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
