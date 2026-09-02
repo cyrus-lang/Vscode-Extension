@@ -7,7 +7,7 @@
     "vscode": "^1.96.0"
   },
   "publisher": "cyrus-lang-tools",
-  "icon": "images/icon.png",
+  "icon": "images/logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/cyrus-lang/Vscode-Extension"
@@ -84,6 +84,10 @@
         "extensions": [
           ".cyrus"
         ],
+        "icon": {
+          "light": "./images/logo-transparent-light.png",
+          "dark": "./images/logo-transparent-dark.png"
+        },
         "configuration": "./language-configuration.json"
       }
     ],
