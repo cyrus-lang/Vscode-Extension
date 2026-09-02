@@ -113,7 +113,7 @@
     "keywords": {
       "patterns": [
         {
-          "match": "\\b(if|else|goto|for|while|switch|case|break|continue|return|pub|mod|defer|fn|import|as|var|const|type|dynamic|struct|enum|union|interface|extern)\\b",
+          "match": "\\b(if|else|goto|for|while|switch|case|break|continue|return|pub|static|mod|defer|fn|import|as|var|const|type|dynamic|struct|enum|union|interface|extern)\\b",
           "name": "keyword.control.cyrus"
         },
         {
