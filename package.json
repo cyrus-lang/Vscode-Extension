@@ -96,14 +96,19 @@
     ],
     "themes": [
       {
-        "label": "Legends Dark",
+        "label": "Cyrus Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/legends-dark-theme.json"
+        "path": "./themes/cyrus-dark-theme.json"
       },
       {
-        "label": "Legends Light",
+        "label": "Cyrus Lighter Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyrus-lighter-dark-theme.json"
+      },
+      {
+        "label": "Cyrus Light",
         "uiTheme": "vs",
-        "path": "./themes/legends-light-theme.json"
+        "path": "./themes/cyrus-light-theme.json"
       }
     ]
   },
