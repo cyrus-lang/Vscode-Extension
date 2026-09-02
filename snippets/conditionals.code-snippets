@@ -49,5 +49,14 @@
       "}"
     ],
     "description": "Switch statement matching on enum variants"
+  },
+  "Switch Guard": {
+    "prefix": "switchguard",
+    "body": [
+      "switch (${1:val}) case ${2} else {",
+      "    ${3}",
+      "}"
+    ],
+    "description": "Switch guard statement with pattern matching"
   }
 }

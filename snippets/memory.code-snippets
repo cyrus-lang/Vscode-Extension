@@ -1,0 +1,9 @@
+{
+  "Allocator Initialization": {
+    "prefix": "allocator",
+    "body": [
+      "const allocator: Allocator = dynamic LibcAllocator.new();"
+    ],
+    "description": "Initialize dynamic LibcAllocator"
+  }
+}

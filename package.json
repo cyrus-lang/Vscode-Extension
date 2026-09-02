@@ -65,6 +65,14 @@
       {
         "language": "cyrus",
         "path": "./snippets/misc.code-snippets"
+      },
+      {
+        "language": "cyrus",
+        "path": "./snippets/attributes.code-snippets"
+      },
+      {
+        "language": "cyrus",
+        "path": "./snippets/memory.code-snippets"
       }
     ],
     "languages": [

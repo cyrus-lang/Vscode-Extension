@@ -1,0 +1,107 @@
+{
+  "Attribute": {
+    "prefix": "attr",
+    "body": [
+      "[[${0}]]"
+    ],
+    "description": "General attribute"
+  },
+  "Hot Attribute": {
+    "prefix": "hot",
+    "body": [
+      "[[hot]]"
+    ],
+    "description": "Hot function attribute"
+  },
+  "Cold Attribute": {
+    "prefix": "cold",
+    "body": [
+      "[[cold]]"
+    ],
+    "description": "Cold function attribute"
+  },
+  "Repr Attribute": {
+    "prefix": "repr",
+    "body": [
+      "[[repr(${1:c})]]"
+    ],
+    "description": "Type representation attribute"
+  },
+  "Repr Packed Attribute": {
+    "prefix": "repr_packed",
+    "body": [
+      "[[repr(packed)]]"
+    ],
+    "description": "Packed type representation attribute"
+  },
+  "Thread Local Attribute": {
+    "prefix": "threadlocal",
+    "body": [
+      "[[thread_local]]"
+    ],
+    "description": "Thread local storage attribute"
+  },
+  "Call Convention Attribute": {
+    "prefix": "callconv",
+    "body": [
+      "[[callconv(${1:c})]]"
+    ],
+    "description": "Calling convention attribute"
+  },
+  "Link Attribute": {
+    "prefix": "link",
+    "body": [
+      "[[link(${1:weak})]]"
+    ],
+    "description": "Linkage attribute"
+  },
+  "Inline Attribute": {
+    "prefix": "inline",
+    "body": [
+      "[[inline]]"
+    ],
+    "description": "Inline function attribute"
+  },
+  "Inline Always Attribute": {
+    "prefix": "inlinealways",
+    "body": [
+      "[[inline(always)]]"
+    ],
+    "description": "Always inline function attribute"
+  },
+  "Inline Never Attribute": {
+    "prefix": "inlinenever",
+    "body": [
+      "[[inline(never)]]"
+    ],
+    "description": "Never inline function attribute"
+  },
+  "Section Attribute": {
+    "prefix": "section",
+    "body": [
+      "[[section(\"${1:.text}\")]]"
+    ],
+    "description": "Section attribute"
+  },
+  "Link Name Attribute": {
+    "prefix": "linkname",
+    "body": [
+      "[[link_name(\"${1:name}\")]]"
+    ],
+    "description": "Link name attribute"
+  },
+  "No Sanitize Attribute": {
+    "prefix": "nosanitize",
+    "body": [
+      "[[nosanitize(\"${1:address}\")]]"
+    ],
+    "description": "No sanitize attribute"
+  },
+  "Optimization Attribute": {
+    "prefix": "opt",
+    "body": [
+      "[[opt(${1:size})]]"
+    ],
+    "description": "Optimization attribute (speed, size, none)"
+  }
+}

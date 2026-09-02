@@ -168,28 +168,13 @@
         }
       ]
     },
-    "enum-members": {
-      "patterns": [
-        {
-          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)::([A-Za-z_][A-Za-z0-9_]*)\\b",
-          "captures": {
-            "1": {
-              "name": "support.namespace.cyrus"
-            },
-            "2": {
-              "name": "constant.other.enum-member.cyrus"
-            }
-          }
-        }
-      ]
-    },
-    "properties": {
+    "unnamed-enum-variant": {
       "patterns": [
         {
           "match": "\\.([A-Za-z_][A-Za-z0-9_]*)",
           "captures": {
             "1": {
-              "name": "variable.other.property.cyrus"
+              "name": "unnamed.enum.variant.cyrus"
             }
           }
         }
@@ -204,10 +189,6 @@
         {
           "match": "\\bcase\\b",
           "name": "keyword.control.case.cyrus"
-        },
-        {
-          "match": "\\bdefault\\b",
-          "name": "keyword.control.default.cyrus"
         }
       ]
     },
@@ -228,14 +209,6 @@
               "name": "entity.name.function.preprocessor.cyrus"
             }
           }
-        },
-        {
-          "match": "\\b(?!(if|else|for|while|return|switch|case|break|continue|fn|var|const|macro|type|union|enum|interface)\\b)([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()",
-          "captures": {
-            "2": {
-              "name": "entity.name.function.member.cyrus"
-            }
-          }
         }
       ]
     },
@@ -253,6 +226,34 @@
     },
     "variables": {
       "patterns": [
+        {
+          "match": "\\b(pub\\s+)?static\\s+var\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*(:\\s*[A-Za-z_][A-Za-z0-9_]*)?(\\s*=\\s*[^;]+)?",
+          "captures": {
+            "2": {
+              "name": "variable.other.readwrite.static.cyrus"
+            },
+            "3": {
+              "name": "storage.type.cyrus"
+            },
+            "4": {
+              "name": "meta.initialization.cyrus"
+            }
+          }
+        },
+        {
+          "match": "\\b(pub\\s+)?static\\s+const\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*(:\\s*[A-Za-z_][A-Za-z0-9_]*)?(\\s*=\\s*[^;]+)?",
+          "captures": {
+            "2": {
+              "name": "variable.other.constant.static.cyrus"
+            },
+            "3": {
+              "name": "storage.type.cyrus"
+            },
+            "4": {
+              "name": "meta.initialization.cyrus"
+            }
+          }
+        },
         {
           "match": "\\bvar\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*(:\\s*[A-Za-z_][A-Za-z0-9_]*)?(\\s*=\\s*[^;]+)?",
           "captures": {
