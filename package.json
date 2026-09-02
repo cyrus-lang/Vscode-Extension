@@ -93,6 +93,18 @@
         "scopeName": "source.cyrus",
         "path": "./syntaxes/cyrus.tmLanguage.json"
       }
+    ],
+    "themes": [
+      {
+        "label": "Legends Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/legends-dark-theme.json"
+      },
+      {
+        "label": "Legends Light",
+        "uiTheme": "vs",
+        "path": "./themes/legends-light-theme.json"
+      }
     ]
   },
   "devDependencies": {
